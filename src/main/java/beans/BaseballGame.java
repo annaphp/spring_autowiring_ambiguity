@@ -14,7 +14,7 @@ public class BaseballGame implements Game{
 	public BaseballGame(){}
 	
 
-	public BaseballGame(  Team homeTeam,  Team awayTeam){
+	public BaseballGame(Team homeTeam,  Team awayTeam){
 		
 		if(homeTeam == awayTeam) System.out.println("home and away are the same object on the heap");
 		
@@ -44,7 +44,7 @@ public class BaseballGame implements Game{
 	}
 
 	public String playGame() {
-		// TODO Auto-generated method stub
+		if(homeTeam == awayTeam) System.out.println("home and away are the same object on the heap");
 		return Math.random() < 0.5 ? getHomeTeam().getName() : getAwayTeam().getName();
 	}
 
