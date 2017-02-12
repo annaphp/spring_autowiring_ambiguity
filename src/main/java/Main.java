@@ -1,8 +1,8 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import config.AppConfig;
 import beans.Game;
+import config.AppConfig;
 
 
 public class Main {

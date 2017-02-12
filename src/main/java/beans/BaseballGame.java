@@ -2,7 +2,6 @@ package beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -23,23 +22,23 @@ public class BaseballGame implements Game{
 	}
 
 	@Autowired //Without qualifier Spring cannot decide between two Teams
+	@Qualifier("redSox")
 	public void setHomeTeam(Team team) {
 		homeTeam = team;
 		
 	}
 
 	public Team getHomeTeam() {
-		// TODO Auto-generated method stub
 		return homeTeam;
 	}
 	
 	@Autowired
+	@Qualifier("cubs")
 	public void setAwayTeam(Team team) {
 		awayTeam=team;
 	}
 
 	public Team getAwayTeam() {
-		// TODO Auto-generated method stub
 		return awayTeam;
 	}
 
